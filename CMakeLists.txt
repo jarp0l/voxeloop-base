@@ -21,7 +21,13 @@ FetchContent_Declare(
         GIT_TAG 0.9.9.8
 )
 
-FetchContent_MakeAvailable(glfw glm)
+
+FetchContent_Declare(
+        nanogui
+        GIT_REPOSITORY https://github.com/mitsuba-renderer/nanogui.git
+)
+
+FetchContent_MakeAvailable(glfw glm nanogui)
 add_subdirectory(glad)
 add_subdirectory(imgui)
 add_subdirectory(stb)
